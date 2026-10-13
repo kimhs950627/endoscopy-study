@@ -121,9 +121,20 @@ footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:v
 @media print{
   .topbar,nav.toc,#totop{display:none}
   .layout{display:block;max-width:none;padding:0}
-  body{background:#fff;font-size:11pt}
-  figure,.tblwrap,.quiz{box-shadow:none;break-inside:avoid}
-  h2{break-after:avoid}
+  body{background:#fff;font-size:11pt;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  figure,.quiz,.rx,.pf,.pearl,blockquote{box-shadow:none;break-inside:avoid}
+  /* tables must not clip: let them fit the page and wrap text */
+  .tblwrap{overflow:visible!important;break-inside:auto}
+  table{min-width:0!important;width:100%}
+  th{white-space:normal!important}
+  th,td{overflow-wrap:anywhere;word-break:break-word}
+  td img{width:58px}
+  thead{display:table-header-group}
+  tr{break-inside:avoid}
+  h2,h3{break-after:avoid}
+  /* quiz answers are visible in print */
+  details>summary{display:none}
+  details>div.ans{display:block!important}
 }
 #totop{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--acc);color:#fff;border:0;border-radius:50%;
   width:46px;height:46px;font-size:20px;cursor:pointer;box-shadow:var(--shadow)}

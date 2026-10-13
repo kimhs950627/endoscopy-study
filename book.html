@@ -16,11 +16,21 @@
   .bookchapter{padding-top:10px}
   .bookchapter.newpage{border-top:1px solid var(--line);margin-top:36px;padding-top:30px}
   @media print{
-    body{background:#fff} .book{max-width:none;box-shadow:none;padding:0}
+    body{background:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    .book{max-width:none;box-shadow:none;padding:0}
     .bookchapter.newpage{border-top:0;page-break-before:always;margin:0;padding-top:0}
-    figure,.tblwrap,.quiz,table,tr{break-inside:avoid}
+    .tblwrap{overflow:visible!important;break-inside:auto}
+    table{min-width:0!important;width:100%}
+    th{white-space:normal!important}
+    th,td{overflow-wrap:anywhere;word-break:break-word}
+    td img{width:58px}
+    thead{display:table-header-group}
+    tr{break-inside:avoid}
+    figure,.quiz,.rx,.pf,.pearl,blockquote{break-inside:avoid}
     h2,h3{break-after:avoid}
     h1,h2,h3,.chapter-head .no{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    details>summary{display:none}
+    details>div.ans{display:block!important}
     a{color:inherit;text-decoration:none}
   }
 </style>
@@ -5583,5 +5593,9 @@
     </div>
 </section>
 </div>
+<script>
+// 합본: 연습문제 해설을 모두 펼쳐 둔다(화면·PDF 동일).
+document.querySelectorAll("details").forEach(function(d){ d.open = true; });
+</script>
 </body>
 </html>
