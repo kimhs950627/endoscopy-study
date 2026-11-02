@@ -130,8 +130,11 @@ python3 tools/check.py           # 장별 이미지·표·퀴즈 무결성
 ## GitHub Pages
 
 - 저장소는 **public** — GitHub Pages는 무료 플랜에서 private 저장소를 지원하지 않는다.
-- 배포: master push 시 `.github/workflows/pages.yml`이 루트를 그대로 올린다(LFS 포함).
-  빌드 단계가 없는 정적 사이트라 HTML/PDF는 **로컬에서 구운 뒤 커밋**한다.
+- 배포: master push → Pages **legacy branch build**(branch `master`, path `/`). `.nojekyll`이 있어
+  정적 파일이 그대로 올라간다. HTML/PDF는 **로컬에서 구운 뒤 커밋**한다.
+- **PDF는 Git LFS**라 Pages가 포인터(134B)를 서빙한다. 그래서 다운로드 버튼은 LFS 미디어 URL을 쓴다:
+  `https://media.githubusercontent.com/media/kimhs950627/endoscopy-study/master/downloads/EGD-workbook.pdf`
+- 저장소 public 전환 근거: 무료 플랜에서 private 저장소는 Pages를 지원하지 않는다.
 - 주소: https://kimhs950627.github.io/endoscopy-study/
 
 ## CFS(대장내시경) 워크북 계획

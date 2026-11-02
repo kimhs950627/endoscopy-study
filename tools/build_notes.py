@@ -214,7 +214,7 @@ def page(item: dict, body: str, toc, sources) -> str:
   <nav>
     <a href="../egd/index.html" class="{"on" if channel == "egd" else ""}">EGD</a>
     <a href="../cfs/index.html" class="{"on" if channel == "cfs" else ""}">CFS</a>
-    <a href="../downloads/EGD-workbook.pdf">PDF</a>
+    <a href="https://media.githubusercontent.com/media/kimhs950627/endoscopy-study/master/downloads/EGD-workbook.pdf" rel="noopener">PDF</a>
   </nav>
 </header>
 <main class="wrap">
