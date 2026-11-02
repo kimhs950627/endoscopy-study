@@ -22,6 +22,7 @@
 │  ├─ 01-식도-양성.html 02-식도-악성.html
 │  ├─ 03-위-양성.html   04-위-악성.html
 │  ├─ 05-십이지장-양성.html 06-십이지장-악성.html
+│  ├─ 07-감별증례.html      감별 증례 100 (생성물)
 │  └─ book.html            합본 (PDF 인쇄 원본)
 ├─ cfs/                    CFS(대장) 워크북 — 조립 중
 │  ├─ index.html           현황 · 예정 목차
@@ -32,6 +33,7 @@
 │  ├─ pages.json           독립 페이지로 렌더할 노트 (cfs 등)
 │  └─ egd-*.md, cfs-*.md
 ├─ data/structure.json     기관(식도·위·십이지장) × 양성/악성 장 매핑
+├─ data/cases.json         감별 증례 100 (PDF에서 재추출, tools/import_cases.py 산출)
 ├─ routines/onenote-sync.md  매일 03:00 자동 동기화 지시서
 ├─ assets/
 │  ├─ site.css             허브·표지 테마 토큰
@@ -55,6 +57,7 @@
 - 2단 성상 탭 → 같은 기관의 양성 ↔ 악성 전환
 - 3단 질환 칩 → 그 장의 `<h2>` 절로 바로 이동, 스크롤하면 활성 칩이 자동 추적
 - **◆ 표시가 붙은 칩 = 학회노트가 들어 있는 질환** (예: GERD, Barrett, 위궤양, ESD 적응)
+- 마지막 탭 **증례** → 「감별 증례 100」 (위 80 · 식도 20)
 
 생성은 `tools/build_nav.py`가 한다. 장에 `<h2>`를 추가하면 다음 빌드에서 칩이 자동으로 늘어난다.
 
@@ -75,6 +78,30 @@ OneNote 학회 정리는 **원본 워크북의 해당 질환 절 끝에 인라�
 삽입 블록은 `<!-- note:<slug>:start --> … <!-- note:<slug>:end -->` 마커로 감싸므로 **다시 돌려도
 중복되지 않고 교체**된다. 새 주제는 ① md 작성 ② `notes.map.json`에 `{file, chapter, h2, label}` 한 줄 —
 그 다음 빌드가 서브탭·합본·PDF까지 알아서 맞춘다.
+
+## 감별 증례 100 (CHAPTER 07)
+
+`D:/pdf_to_cards`의 증례 카드(`100증례 조기위암, 식도암 감별`)를 워크북에 합쳤다.
+
+```
+PDF(스캔) + cards.json(page·image 매핑)
+        │  tools/import_cases.py — 텍스트는 PDF에서 읽기순서로 재추출,
+        │                          이미지는 820px/JPEG82로 축소(38MB)
+        ▼
+   data/cases.json   {case, pages, imgs, age_sex, history, summary, body, pathology, tags, organ}
+   assets/img/cases/ 587장
+        │  tools/build_cases.py
+        ▼
+   egd/07-감별증례.html — 위 80 / 식도 20 그룹, 필터·검색·정답 펼치기
+        ▼  build_book → build_pdf
+   PDF: 증례당 반 페이지, 정답·해설 항상 펼친 상태
+```
+
+- 자체 제작한 `cards.json`의 텍스트는 문장 순서가 뒤섞여 있어 **버리고**, 같은 PDF에서
+  PyMuPDF로 다시 뽑았다(그림라벨·페이지번호·`그 밖의 해답` 제거, 줄바꿈은 문장부호 기준으로 병합).
+- 부위 분류는 본문의 해부 키워드(`식도·EGJ·편평상피·이완불능`)로 판정 → 정확히 81~100이 식도.
+- 사진만 먼저 보고 판독하는 자습용: 해설은 `<details>`로 접혀 있고, 인쇄(PDF)에서는 항상 펼쳐진다.
+- 원본 PDF는 저장소에 넣지 않는다(로컬 `D:/pdf_to_cards`에만 존재). 재생성이 필요하면 그 경로에서 실행.
 
 ## 매일 03:00 동기화
 
@@ -171,6 +198,8 @@ EndoTODAY는 IIS가 비브라우저 요청을 `999 No Hacking`으로 차단한�
 | `tools/build_notes.py` | `notes/*.md` → 독립 페이지 |
 | `tools/apply_notes.py` | 학회노트를 각 장의 해당 절에 인라인 삽입 |
 | `tools/build_nav.py` | 질환 서브탭(기관 → 양성/악성 → 질환 칩) 생성 |
+| `tools/import_cases.py` | 증례 PDF → `data/cases.json` + `assets/img/cases` (텍스트 재추출·이미지 축소) |
+| `tools/build_cases.py` | `data/cases.json` → `egd/07-감별증례.html` |
 | `tools/build_book.py` | 장들 → `egd/book.html`, 표지 갱신일 스탬프 |
 | `tools/build_pdf.sh` | 위 단계 + Chrome 인쇄 + 북마크를 한 번에 |
 | `tools/add_outline.py` | PDF 장·절 북마크 주입 (PyMuPDF, 한글 안전) |
@@ -180,16 +209,20 @@ EndoTODAY는 IIS가 비브라우저 요청을 `999 No Hacking`으로 차단한�
 
 | 항목 | 값 |
 |---|---|
-| EGD 장 수 | 7 (총론 + 3기관 × 양성/악성) |
-| 질환 서브탭 | 183개 절 |
+| EGD 장 수 | 8 (총론 + 3기관 × 양성/악성 + 감별증례) |
+| 질환 서브탭 | 185개 절 |
 | 이미지(figure) | 장별 25~217, 합계 695 |
 | 연습문제 | 장별 12~15, 합계 95 |
 | 인라인 학회노트 | 5개 블록 (01·03·04장) |
 | 수집 이미지 | 6,428장 → 사용 713장(107MB) |
-| 합본 PDF | 347쪽, 약 115MB, 북마크 312개 |
+| 감별 증례 | 100례 (위 80 · 식도 20), 사진 587장 |
+| 합본 PDF | 426쪽, 약 153MB, 북마크 315개 |
 
 ## 개발 이력
 
+- **2026-11-03 · 감별 증례 100 통합**: `D:/pdf_to_cards`의 증례 카드를 CHAPTER 07로 편입.
+  텍스트를 PDF에서 읽기순서로 재추출(원본 카드 텍스트는 문장이 뒤섞여 있었음), 이미지 820px로 축소(61→38MB),
+  위 80/식도 20 그룹 + 필터·검색 + 정답 접기(인쇄 시 펼침). PDF 426쪽 / 153MB.
 - **2026-11-03 · 질환 서브탭 + 인라인 학회노트**: 기관→양성/악성→질환 3단 탭 도입(`build_nav.py`+`dx.js`).
   학회노트를 별도 장에서 각 질환 절 안으로 이동(`apply_notes.py`, 마커 기반 교체). 매일 03:00 동기화 루틴.
   저장소 public 전환 + EndoTODAY·이준행 교수 원저 명시.

@@ -41,6 +41,9 @@ def main() -> None:
         chapters.append((organ["malignant"], organ["label"], "악성", ""))
     general = struct["general"]
     chapters.append((general["file"], general["label"], "공통", ""))
+    extras = struct.get("extra", [])
+    for extra in extras:
+        chapters.append((extra["file"], extra["label"], "증례", ""))
 
     for filename, organ_label, nature, _ in chapters:
         path = EGD / filename
@@ -78,10 +81,16 @@ def main() -> None:
             "sections": sections,
             "organs": [{"label": o["label"], "benign": o["benign"], "malignant": o["malignant"]} for o in struct["organs"]],
             "general": struct["general"],
+            "extras": [{"label": e["label"], "file": e["file"]} for e in extras],
         }
 
         # breadcrumb
-        crumb = f"EGD · {organ_label} {nature}" if nature != "공통" else "EGD · 총론"
+        if nature == "증례":
+            crumb = "EGD · 감별 증례"
+        elif nature == "공통":
+            crumb = "EGD · 총론"
+        else:
+            crumb = f"EGD · {organ_label} {nature}"
         html = re.sub(r'<span class="chap">.*?</span>', f'<span class="chap">{crumb}</span>', html, count=1, flags=re.S)
 
         # body marker + script tag

@@ -196,7 +196,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "02-식도-악성.html": {
   "file": "02-식도-악성.html",
@@ -300,7 +306,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "03-위-양성.html": {
   "file": "03-위-양성.html",
@@ -614,7 +626,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "04-위-악성.html": {
   "file": "04-위-악성.html",
@@ -823,7 +841,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "05-십이지장-양성.html": {
   "file": "05-십이지장-양성.html",
@@ -912,7 +936,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "06-십이지장-악성.html": {
   "file": "06-십이지장-악성.html",
@@ -996,7 +1026,13 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  },
  "00-총론.html": {
   "file": "00-총론.html",
@@ -1115,6 +1151,57 @@
   "general": {
    "file": "00-총론.html",
    "label": "총론"
-  }
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
+ },
+ "07-감별증례.html": {
+  "file": "07-감별증례.html",
+  "organ": "증례",
+  "nature": "증례",
+  "chapter": "07",
+  "sections": [
+   {
+    "id": "s-위-조기위암-80례",
+    "title": "위 조기위암 — 80례",
+    "note": false
+   },
+   {
+    "id": "s-식도-조기암-20례",
+    "title": "식도 조기암 — 20례",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  },
+  "extras": [
+   {
+    "label": "증례",
+    "file": "07-감별증례.html"
+   }
+  ]
  }
 }

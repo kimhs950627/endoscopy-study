@@ -11,7 +11,7 @@
     return;
   }
 
-  var isGeneral = data.nature === "공통";
+  var isGeneral = data.nature !== "양성" && data.nature !== "악성";
 
   /* 표지 배경으로 기관별 색을 살짝 바꾼다 */
   var accent = getComputedStyle(document.documentElement).getPropertyValue("--acc").trim();
@@ -34,7 +34,7 @@
   var organs = el("div", "dxseg");
   organs.appendChild(
     (function () {
-      var a = el("a", "dxseg-item" + (isGeneral ? " on" : ""), data.general.label);
+      var a = el("a", "dxseg-item" + (data.file === data.general.file ? " on" : ""), data.general.label);
       a.href = data.general.file;
       return a;
     })()
@@ -42,6 +42,11 @@
   data.organs.forEach(function (o) {
     var a = el("a", "dxseg-item" + (o.label === data.organ ? " on" : ""), o.label);
     a.href = o.label === data.organ ? data.file : data.nature === "악성" ? o.malignant : o.benign;
+    organs.appendChild(a);
+  });
+  (data.extras || []).forEach(function (e) {
+    var a = el("a", "dxseg-item" + (e.file === data.file ? " on" : ""), e.label);
+    a.href = e.file;
     organs.appendChild(a);
   });
   row1.appendChild(organs);

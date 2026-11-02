@@ -14,6 +14,9 @@ python3 tools/build_notes.py
 echo "→ 학회노트를 각 질환 절 안에 삽입"
 ( cd tools && python3 apply_notes.py )
 
+echo "→ 증례 장 재생성"
+python3 tools/build_cases.py
+
 echo "→ 질환 서브탭 재생성"
 python3 tools/build_nav.py
 

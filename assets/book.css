@@ -207,7 +207,7 @@ body.dx main{width:100%;max-width:940px;margin-inline:auto}
   .topbar .chap{order:3;flex-basis:100%;font-size:12px;padding-left:1px}
   .topbar .nav{margin-left:auto;display:flex;gap:4px}
   .topbar .nav a{padding:4px 9px;font-size:12.5px;margin-left:0}
-  .layout{padding:14px 16px 70px}
+  .layout{padding:14px 28px 70px}
   .dxrow{padding:8px 16px 6px;gap:6px}
   .dxseg-item{padding:5px 10px;font-size:13px}
   .dxchips{padding:0 16px 8px}
@@ -218,3 +218,69 @@ body.dx main{width:100%;max-width:940px;margin-inline:auto}
   .dxbar{display:none}
   .note-inline{break-inside:auto;border-left-width:4px;background:#fff}
 }
+
+/* ================= 감별 증례 (07장) ================= */
+.casebar{display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+  padding:10px 0 12px;margin:4px 0 0;background:rgba(247,245,239,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line)}
+.csg{display:flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--card)}
+.csb{appearance:none;border:0;border-right:1px solid var(--line);background:var(--card);color:var(--mut);
+  font:inherit;font-size:13.5px;padding:6px 12px;cursor:pointer}
+.csb:last-child{border-right:0}
+.csb:hover{background:var(--bg);color:var(--acc)}
+.csb.on{background:var(--acc);color:#fff;font-weight:600}
+.cstoggle{border:1px solid var(--line-2);border-radius:8px;font-size:13px;margin-left:auto}
+.csearch{display:flex;align-items:center;gap:8px;border:1px solid var(--line-2);border-radius:8px;
+  padding:4px 10px;background:var(--card)}
+.csearch span{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+.csearch input{border:0;background:transparent;outline:none;font:inherit;font-size:14px;color:var(--ink);min-width:210px}
+.casehint{margin:10px 0 0;font-size:13px;color:var(--mut)}
+
+.case{margin:30px 0 0;padding-top:20px;border-top:1px solid var(--line)}
+.chead{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.cno{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--acc)}
+.corg{font-size:11.5px;border:1px solid var(--line-2);border-radius:999px;padding:1px 9px;color:var(--mut)}
+.cdemo{font-weight:700;font-size:15px;margin-left:auto}
+.chist{margin:8px 0 0;font-size:14.5px;color:var(--mut);line-height:1.6}
+.cfigs{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0 0}
+.cfig{margin:0;background:#0b0f14;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.cfig img{display:block;width:100%;height:auto}
+.cans{margin:14px 0 0;padding:12px 16px;background:#FBFCFA;border:1px solid var(--line);
+  border-left:4px solid var(--acc);border-radius:0 10px 10px 0}
+.cans summary{cursor:pointer;color:var(--acc);font-weight:700;font-size:14px;list-style:none}
+.cans summary::-webkit-details-marker{display:none}
+.cans summary::before{content:"▸ ";}
+.cans[open] summary::before{content:"▾ ";}
+.cans p{margin:8px 0;font-size:14.8px}
+.csum{font-weight:700;color:var(--ink);background:#E7F0EB;border-radius:6px;padding:6px 10px}
+.cpath{font-size:14px;background:#F3F1E8;border-left:3px solid var(--acc2);border-radius:0 8px 8px 0;
+  padding:8px 12px;color:var(--ink-2,#2B3A34)}
+.ctags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.ctag{font-size:12px;color:var(--mut);background:var(--card);border:1px solid var(--line);
+  border-radius:999px;padding:2px 9px}
+
+@media (max-width:760px){
+  .cfigs{grid-template-columns:repeat(2,1fr)}
+  .csearch input{min-width:120px}
+  .csearch{flex:1}
+  .cstoggle{margin-left:0}
+}
+
+@media print{
+  .casebar,.casehint{display:none}
+  .case{break-inside:auto;margin:0 0 6mm;padding-top:4mm}
+  .cfigs{break-inside:avoid}
+  .chead,.chist{break-after:avoid}
+  .cfigs{grid-template-columns:repeat(3,1fr);gap:2mm}
+  .cfig img{max-height:38mm;object-fit:cover}
+  .cans{border-left-width:3px;padding:2mm 3mm}
+  .cans>summary{display:none}
+  .cans p{font-size:9pt;margin:1mm 0}
+  .chist,.cdemo{font-size:9pt}
+  .case + .case{border-top:1px solid var(--line)}
+}
+
+.cgroup > h2{font-family:var(--serif);font-weight:400;font-size:24px;margin:34px 0 6px;border-top:0;padding-top:0}
+.cgroup > .glead{margin:0 0 6px;font-size:14.5px;color:var(--mut)}
+.cgroup + .cgroup{margin-top:44px;border-top:2px solid var(--ink);padding-top:10px}
+.cgroup + .cgroup > h2{margin-top:22px}
