@@ -3,78 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EndoTODAY 참고서 — 상부위장관 내시경</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/book.css">
-<style>
-.cover{padding:44px 0 8px}
-.cover .kicker{color:var(--acc);font-weight:800;letter-spacing:.18em;font-size:13px}
-.cover h1{font-size:clamp(30px,5vw,58px);line-height:1.08;letter-spacing:-.02em;margin:10px 0}
-.chapters{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin:26px 0}
-.chapters a{display:block;text-decoration:none;color:inherit;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:var(--shadow);transition:.15s}
-.chapters a:hover{transform:translateY(-2px);border-color:var(--acc)}
-.chapters .no{font-weight:800;color:var(--acc);font-size:12px;letter-spacing:.12em}
-.chapters .tt{font-weight:800;font-size:19px;margin:5px 0 4px}
-.chapters .ds{color:var(--mut);font-size:13.5px;line-height:1.5}
-.legend table{min-width:0}
-@media(max-width:760px){.chapters{grid-template-columns:1fr}}
-</style>
+<title>Endoscopy Study — EGD · CFS 워크북</title>
+<meta name="description" content="상부위장관내시경(EGD)과 대장내시경(CFS) 학습 워크북. EndoTODAY 참고서와 OneNote 학회노트를 합쳐 매일 갱신한다.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230C6B58'/><rect x='4' y='4' width='8' height='8' fill='%23F7F5EF' transform='rotate(45 8 8)'/></svg>">
 </head>
 <body>
-<header class="topbar">
-  <a class="brand" href="index.html">EndoTODAY 참고서</a>
-  <span class="chap">상부위장관 내시경 — 총론 · 식도 · 위 · 십이지장</span>
-  <span class="nav"><a href="00-총론.html">시작 ▶</a></span>
+
+<header class="sitebar">
+  <a class="mark" href="index.html"><i></i> <span>Endoscopy&nbsp;Study</span></a>
+  <nav>
+    <a href="egd/index.html" class="on">EGD</a>
+    <a href="cfs/index.html">CFS</a>
+    <a href="egd/conference-notes.html">학회노트</a>
+    <a href="downloads/EGD-workbook.pdf">PDF</a>
+  </nav>
 </header>
-<div class="layout">
-  <nav class="toc"><div class="ttl">목차</div><div id="toc"></div></nav>
-  <main>
-    <div class="cover">
-      <div class="kicker">ENDOTODAY STUDY COMPANION</div>
-      <h1>상부위장관 내시경 참고서</h1>
-      <p class="lead" style="font-size:17px">위내시경 테크닉 · 소견 해석 · 진단 · 치료를 장기별·성상별로 정리한 참고서. 한국의 EGD 대가가 운영하는 <b>EndoTODAY(endotoday.com)</b> 강의·아틀라스를 바탕으로, 각 장에 <b>풍부한 증례 이미지 · 이미지–소견–치료 정리표 · 연습문제</b>를 담았다. 약제는 <b>실제 처방 약어</b>로 표기.</p>
-      <div class="meta"><span class="chip">총론</span><span class="chip">식도 양성</span><span class="chip">식도 악성</span><span class="chip">위 양성</span><span class="chip">위 악성</span><span class="chip">십이지장 양성</span><span class="chip">십이지장 악성</span></div>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="eyebrow">내시경 학습 워크북 · 개인 아카이브</div>
+    <h1>두 개의 워크북,<br>하나의 <em>학습 루프</em>.</h1>
+    <p class="sub">
+      EGD(상부위장관)와 CFS(대장)를 각각 하나의 워크북으로 관리한다. EndoTODAY(endotoday.com, 이준행)의
+      강의·아틀라스를 뼈대로 삼고, OneNote <b>Books_for_Meds</b> 노트북의 학회 정리와 검진 프로토콜을
+      매일 끌어와 덧붙인다. 웹은 읽고 검색하는 판, PDF는 들고 다니는 판이다.
+    </p>
+    <div class="rule"></div>
+    <div class="stats">
+      <div><b>7</b><span>EGD 장</span></div>
+      <div><b>695</b><span>증례 이미지</span></div>
+      <div><b>95</b><span>연습문제</span></div>
+      <div><b>매일</b><span>OneNote 동기화</span></div>
+    </div>
+  </section>
+
+  <section class="channels">
+    <a class="banner egd" href="egd/index.html">
+      <div>
+        <div class="code">EGD · Upper GI</div>
+        <h2>상부위장관 내시경</h2>
+        <p class="desc">삽입·관찰, 소견 기술, 식도·위·십이지장의 양성/악성 질환, ESD 적응과 추적.</p>
+      </div>
+      <div class="foot">
+        <span class="tag"><span class="pill live">열림</span></span>
+        <span class="go">워크북 열기</span>
+      </div>
+    </a>
+
+    <a class="banner cfs" href="cfs/index.html">
+      <div>
+        <div class="code">CFS · Lower GI</div>
+        <h2>대장내시경</h2>
+        <p class="desc">장정결, 삽입·회맹부 도달, 용종 형태·처치, 감시 간격. 지금 조립 중이다.</p>
+      </div>
+      <div class="foot">
+        <span class="tag"><span class="pill wait">준비 중</span> 초안 공개</span>
+        <span class="go">현황 보기</span>
+      </div>
+    </a>
+  </section>
+
+  <section class="block">
+    <div class="hd"><h2>이 저장소가 하는 일</h2><span>pipeline</span></div>
+    <div class="grid3">
+      <div class="note-card">
+        <h3>1 · 뼈대는 EndoTODAY</h3>
+        <p>endotoday.com의 강의·아틀라스 230여 페이지를 수집해 7개 장으로 재편집했다. 각 장은
+        증례 이미지, 이미지–소견–치료 정리표, 연습문제를 갖는다.</p>
+      </div>
+      <div class="note-card">
+        <h3>2 · 살은 OneNote</h3>
+        <p>내가 학회에서 정리한 노트(GI·Endo, 검진 protocol)를 MCP로 읽어 <code>notes/</code>에
+        마크다운으로 떨어뜨린다. 개인 메모·보험 같은 잡음은 규칙으로 걸러낸다.</p>
+      </div>
+      <div class="note-card">
+        <h3>3 · 출력은 웹 + PDF</h3>
+        <p>합본 <code>book.html</code>을 인쇄해 PDF로 북마크까지 넣는다. 업데이트가 끝나면
+        다운로드 링크의 PDF가 같은 내용으로 다시 만들어진다.</p>
+      </div>
     </div>
 
-    <h2>목차</h2>
-    <div class="chapters">
-      <a href="00-총론.html"><div class="no">CHAPTER 00</div><div class="tt">총론 — 내시경 술기와 소견 기술</div><div class="ds">삽입법·관찰, 해부, 소견기술법(DEX), 색소/확대내시경(NBI), 조직검사, 용어·분류, 질지표, 진정, 항혈소판제/항응고제 관리, 합병증.</div></a>
-      <a href="01-식도-양성.html"><div class="no">CHAPTER 01</div><div class="tt">식도 양성 질환</div><div class="ds">식도염(칸디다·바이러스·호산구·부식성·약물·sloughing), GERD, Barrett, 정맥류, 게실, 이완불능증, SMT·유두종·inlet patch, 열공탈장.</div></a>
-      <a href="02-식도-악성.html"><div class="no">CHAPTER 02</div><div class="tt">식도 악성 질환</div><div class="ds">편평세포암·Barrett 선암, 조기식도암 육안분류, 진단(색소·확대·EUS), 치료(ESD·CRT), 흑색종.</div></a>
-      <a href="03-위-양성.html"><div class="no">CHAPTER 03</div><div class="tt">위 양성 질환</div><div class="ds">정상해부, H. pylori, 만성위염/Kyoto, 소화성궤양(Forrest·출혈), 용종·선종, SMT(GIST·NET 등), GAVE·PHG·정맥류, 이물·PEG.</div></a>
-      <a href="04-위-악성.html"><div class="no">CHAPTER 04</div><div class="tt">위 악성 질환</div><div class="ds">조기위암 육안분류, 진행위암(Borrmann), Lauren/WHO, TNM 8판, ESD 적응·eCura, GEJ암, MALT/림프종, 치료.</div></a>
-      <a href="05-십이지장-양성.html"><div class="no">CHAPTER 05</div><div class="tt">십이지장 양성 질환</div><div class="ds">위치기술, 궤양, 십이지장염, 이소성 위점막·췌장, 브루너샘, 림프관확장증, SMT, 게실, HSP, 선종.</div></a>
-      <a href="06-십이지장-악성.html"><div class="no">CHAPTER 06</div><div class="tt">십이지장 악성 질환</div><div class="ds">십이지장 선암, 유두부(ampullary) 병변, 신경내분비종양, 림프종, 전이성 병변.</div></a>
+    <div class="flow">
+      <ol>
+        <li><b>동기화</b> — OneNote MCP로 학회노트 페이지를 읽는다 (<code>tools/sync-onenote.md</code> 절차).</li>
+        <li><b>정규화</b> — <code>tools/onenote_to_md.py</code>가 HTML을 마크다운으로 바꾸고 중복·잡음을 제거한다.</li>
+        <li><b>반영</b> — <code>tools/build_notes.py</code>가 <code>notes/*.md</code>를
+          워크북의 「학회노트」 장으로 렌더한다.</li>
+        <li><b>빌드</b> — <code>tools/build_book.py</code> → <code>book.html</code> → Chrome 인쇄 →
+          <code>downloads/EGD-workbook.pdf</code> (북마크 주입).</li>
+        <li><b>배포</b> — master push → GitHub Actions → Pages.</li>
+      </ol>
     </div>
+  </section>
 
-    <h2>처방 약어 범례</h2>
-    <div class="tblwrap legend">
-      <table>
-        <caption>표 0-1. 본 참고서의 처방 표기 약어</caption>
-        <thead><tr><th>약어</th><th>의미</th><th>약어</th><th>의미</th></tr></thead>
-        <tbody>
-          <tr><td>qd</td><td>1일 1회(quaque die)</td><td>bid</td><td>1일 2회(bis in die)</td></tr>
-          <tr><td>tid / qid</td><td>1일 3회 / 4회</td><td>qod</td><td>격일</td></tr>
-          <tr><td>hs</td><td>취침 시(hora somni)</td><td>prn</td><td>필요 시</td></tr>
-          <tr><td>po</td><td>경구(per os)</td><td>IV / IM / SC</td><td>정맥/근육/피하 주사</td></tr>
-          <tr><td>ac</td><td>식전(ante cibum)</td><td>pc</td><td>식후(post cibum)</td></tr>
-          <tr><td>1mo / 2wk</td><td>1개월 / 2주</td><td>14d / 8wk</td><td>14일 / 8주</td></tr>
-          <tr><td>kcab</td><td>tegoprazan 50mg(K-CAB)</td><td>PPI</td><td>양성자펌프억제제(esomeprazole 등)</td></tr>
-          <tr><td>amox / cla</td><td>amoxicillin / clarithromycin</td><td>Hp</td><td>Helicobacter pylori</td></tr>
-        </tbody>
-      </table>
-    </div>
+  <section class="block">
+    <div class="hd"><h2>바로 가기</h2><span>shortcuts</span></div>
+    <ul class="toc-list">
+      <li><a href="egd/index.html"><span class="n">EGD</span><span class="tt">워크북 표지</span><span class="ds">장별 목차 · PDF 다운로드</span></a></li>
+      <li><a href="egd/00-총론.html"><span class="n">00</span><span class="tt">총론 — 술기와 소견 기술</span><span class="ds">삽입법·DEX·NBI·조직검사·진정·합병증</span></a></li>
+      <li><a href="egd/04-위-악성.html"><span class="n">04</span><span class="tt">위 악성</span><span class="ds">조기위암 육안분류 · ESD 적응 · eCura</span></a></li>
+      <li><a href="egd/conference-notes.html"><span class="n">노트</span><span class="tt">학회노트 (OneNote 동기화)</span><span class="ds">GERD/LA · Barrett · 궤양 vs 위암 · ESD 추적</span></a></li>
+      <li><a href="cfs/index.html"><span class="n">CFS</span><span class="tt">대장내시경 준비 현황</span><span class="ds">용종 추적 간격 초안</span></a></li>
+    </ul>
+  </section>
 
-    <div class="pearl"><div class="t">읽는 법</div><ul>
-      <li>각 장은 <b>도입 → 질환별 섹션 → 이미지–소견–치료 정리표 → 연습문제</b> 순서다. (총론은 표·퀴즈 구조가 다르다.)</li>
-      <li>이미지는 EndoTODAY의 실제 증례 사진이며 캡션에 핵심 소견을 요약했다.</li>
-      <li>우측 하단 <span style="font-weight:800">↑</span> 버튼으로 맨 위로, 상단바로 이전/다음 장으로 이동한다. 브라우저 인쇄로 PDF 저장도 가능하다.</li>
-    </ul></div>
+  <footer class="sitefoot">
+    <p>EndoTODAY(endotoday.com, 이준행) 강의·아틀라스와 본인 OneNote 학회 정리를 기반으로 한 개인 학습용
+    정리. 원저작물의 권리는 원저자에게 있다.</p>
+    <p>약제·용량·기간은 실제 처방 관례와 학회 노트를 따른 것으로, 임상 적용 시 최신 가이드라인과
+    환자 상태를 반드시 확인할 것. 최종 판단과 처방은 면허 임상의의 몫이다.</p>
+  </footer>
+</main>
 
-    <footer>EndoTODAY(endotoday.com, 이준행) 강의·아틀라스 기반 개인 학습용 정리. 원저작물의 권리는 원저자에게 있으며, 약제·용량·기간은 실제 처방 관례에 따라 표기하였다. 임상 적용 시 최신 가이드라인과 환자 상태를 확인할 것.</footer>
-  </main>
-</div>
-<button id="totop" title="맨 위로">↑</button>
-<script src="assets/book.js"></script>
 </body>
 </html>

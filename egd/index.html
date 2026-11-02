@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EGD 워크북 — 상부위장관 내시경</title>
+<meta name="description" content="상부위장관 내시경 워크북. 총론·식도·위·십이지장 7개 장과 OneNote 학회노트, 합본 PDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  :root{--acc:var(--egd);--accSoft:var(--egd-soft)}
+  .cover{padding-top:34px}
+  .cover h1{margin-top:16px}
+  .cover .rule{height:3px;background:var(--ink);width:76px;margin:28px 0 0}
+  .note-strip{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:34px}
+  .note-strip .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+  .note-strip h3{font-family:var(--serif);font-size:19px;margin-bottom:6px}
+  .note-strip p{margin:0 0 12px;font-size:14px;color:var(--mut)}
+  .legend{margin-top:34px}
+  .legend h3{font-family:var(--serif);font-size:20px;margin-bottom:10px}
+  @media(max-width:760px){.note-strip{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="sitebar">
+  <a class="mark" href="../index.html"><i></i> <span>Endoscopy&nbsp;Study</span></a>
+  <nav>
+    <a href="index.html" class="on">EGD</a>
+    <a href="../cfs/index.html">CFS</a>
+    <a href="conference-notes.html">학회노트</a>
+    <a href="../downloads/EGD-workbook.pdf">PDF</a>
+  </nav>
+</header>
+
+<main class="wrap cover">
+
+  <div class="kicker">EGD · UPPER GI · WORKBOOK 01</div>
+  <h1>상부위장관<br>내시경 워크북</h1>
+  <p class="lead">
+    삽입법과 관찰, 소견 기술(DEX), 색소·확대내시경, 그리고 식도·위·십이지장의 양성/악성 질환을
+    장기별로 정리했다. 뼈대는 EndoTODAY(endotoday.com, 이준행) 강의·아틀라스, 살은 내가 학회에서
+    정리한 OneNote 노트다. 각 장에 증례 이미지·이미지–소견–치료 정리표·연습문제를 붙였다.
+  </p>
+
+  <dl class="cover-meta">
+    <div><dt>구성</dt><dd>7개 장 + 학회노트</dd></div>
+    <div><dt>증례 이미지</dt><dd>695장</dd></div>
+    <div><dt>연습문제</dt><dd>95문항</dd></div>
+    <div><dt>최종 갱신</dt><dd><time data-updated>2026-11-03</time></dd></div>
+  </dl>
+
+  <div class="download">
+    <div>
+      <div class="t">합본 PDF 내려받기</div>
+      <div class="s">전체 장을 인쇄용으로 합친 판본 · 장·절 북마크 포함 · Git LFS</div>
+    </div>
+    <a class="btn" href="../downloads/EGD-workbook.pdf" download>PDF 내려받기</a>
+    <a class="btn ghost" href="book.html">웹에서 합본 읽기</a>
+  </div>
+
+  <section class="block" style="padding-top:44px">
+    <div class="hd"><h2>목차</h2><span>chapters</span></div>
+    <ul class="toc-list">
+      <li><a href="00-총론.html"><span class="n">00</span><span class="tt">총론 — 내시경 술기와 소견 기술</span><span class="ds">삽입법·관찰, 해부, DEX, NBI, 조직검사, 진정, 항혈소판제, 합병증</span></a></li>
+      <li><a href="01-식도-양성.html"><span class="n">01</span><span class="tt">식도 양성 질환</span><span class="ds">식도염 각종, GERD, Barrett, 정맥류, 게실, 이완불능증, SMT</span></a></li>
+      <li><a href="02-식도-악성.html"><span class="n">02</span><span class="tt">식도 악성 질환</span><span class="ds">편평세포암·Barrett 선암, 조기식도암 분류, EUS, ESD·CRT</span></a></li>
+      <li><a href="03-위-양성.html"><span class="n">03</span><span class="tt">위 양성 질환</span><span class="ds">H. pylori, 만성위염/Kyoto, 소화성궤양·Forrest, 용종·선종, SMT</span></a></li>
+      <li><a href="04-위-악성.html"><span class="n">04</span><span class="tt">위 악성 질환</span><span class="ds">조기위암 육안분류, Borrmann, TNM 8판, ESD 적응·eCura, MALT</span></a></li>
+      <li><a href="05-십이지장-양성.html"><span class="n">05</span><span class="tt">십이지장 양성 질환</span><span class="ds">위치기술, 궤양, 십이지장염, 이소성 점막, 게실, HSP, 선종</span></a></li>
+      <li><a href="06-십이지장-악성.html"><span class="n">06</span><span class="tt">십이지장 악성 질환</span><span class="ds">선암, 유두부 병변, NET, 림프종, 전이</span></a></li>
+      <li><a href="conference-notes.html"><span class="n">노트</span><span class="tt">학회노트 — OneNote 동기화</span><span class="ds">GERD/LA, Barrett, 궤양 vs 위암, 조기위암 ESD 적응과 추적</span></a></li>
+    </ul>
+  </section>
+
+  <section class="block">
+    <div class="hd"><h2>이 워크북을 쓰는 법</h2><span>how to use</span></div>
+    <div class="note-strip">
+      <div class="card">
+        <h3>웹판</h3>
+        <p>장을 넘기며 읽고, 좌측 목차로 절 단위 이동. 연습문제는 클릭해서 해설을 펼친다.</p>
+        <a class="btn ghost" href="00-총론.html">총론부터</a>
+      </div>
+      <div class="card">
+        <h3>PDF판</h3>
+        <p>인쇄·오프라인용. 북마크로 장·절을 바로 찾고, 연습문제 해설은 인쇄 시 펼쳐진 상태로 나온다.</p>
+        <a class="btn ghost" href="../downloads/EGD-workbook.pdf" download>PDF 받기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="block legend">
+    <div class="hd"><h2>처방 약어 범례</h2><span>legend</span></div>
+    <table class="tbl">
+      <caption>본 워크북의 처방 표기 약어</caption>
+      <thead><tr><th>약어</th><th>의미</th><th>약어</th><th>의미</th></tr></thead>
+      <tbody>
+        <tr><td>qd / bid</td><td>1일 1회 / 2회</td><td>tid / qid</td><td>1일 3회 / 4회</td></tr>
+        <tr><td>qod</td><td>격일</td><td>hs</td><td>취침 시</td></tr>
+        <tr><td>prn</td><td>필요 시</td><td>po / IV / IM / SC</td><td>경구 / 정맥 / 근육 / 피하</td></tr>
+        <tr><td>ac / pc</td><td>식전 / 식후</td><td>1mo / 2wk</td><td>1개월 / 2주</td></tr>
+        <tr><td>kcab</td><td>tegoprazan 50mg (K-CAB)</td><td>PPI</td><td>양성자펌프억제제</td></tr>
+        <tr><td>amox / cla</td><td>amoxicillin / clarithromycin</td><td>Hp</td><td>Helicobacter pylori</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <footer class="sitefoot">
+    <p>EndoTODAY(endotoday.com, 이준행) 강의·아틀라스와 본인 OneNote 학회 정리를 기반으로 한 개인 학습용 정리.
+    원저작물의 권리는 원저자에게 있다.</p>
+    <p>약제·용량·기간은 실제 처방 관례를 따른 것으로, 임상 적용 시 최신 가이드라인과 환자 상태를 확인할 것.</p>
+    <p><a href="../index.html">← 전체 허브</a></p>
+  </footer>
+</main>
+
+</body>
+</html>

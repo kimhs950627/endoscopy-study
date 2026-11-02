@@ -1,0 +1,22 @@
+{
+  "egd/conference-notes.html": {
+    "channel": "egd",
+    "kicker": "EGD · CONFERENCE NOTES",
+    "title": "학회노트 — 상부위장관",
+    "lead": "OneNote 『Books_for_Meds』의 학회 정리와 검진 프로토콜을 워크북에 맞춰 옮긴 것. 원문은 노트에 있고, 여기서는 내시경 판단에 바로 쓰이는 형태로 재편집한다. 갱신은 tools/sync-onenote.md 절차를 따른다.",
+    "files": [
+      "notes/egd-gerd-barrett.md",
+      "notes/egd-ugc-cancer.md",
+      "notes/egd-egc-esd.md"
+    ]
+  },
+  "cfs/surveillance.html": {
+    "channel": "cfs",
+    "kicker": "CFS · SURVEILLANCE",
+    "title": "용종 추적 간격",
+    "lead": "대장내시경 워크북을 조립하기 전에, 이미 정리해 둔 추적 간격 표를 먼저 공개한다. 원전 인용은 CFS 작업 때 확정한다.",
+    "files": [
+      "notes/cfs-surveillance.md"
+    ]
+  }
+}
