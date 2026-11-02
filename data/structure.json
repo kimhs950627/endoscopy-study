@@ -1,0 +1,23 @@
+{
+  "organs": [
+    {
+      "id": "esophagus",
+      "label": "식도",
+      "benign": "01-식도-양성.html",
+      "malignant": "02-식도-악성.html"
+    },
+    {
+      "id": "stomach",
+      "label": "위",
+      "benign": "03-위-양성.html",
+      "malignant": "04-위-악성.html"
+    },
+    {
+      "id": "duodenum",
+      "label": "십이지장",
+      "benign": "05-십이지장-양성.html",
+      "malignant": "06-십이지장-악성.html"
+    }
+  ],
+  "general": { "file": "00-총론.html", "label": "총론" }
+}

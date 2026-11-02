@@ -1,0 +1,1120 @@
+{
+ "01-식도-양성.html": {
+  "file": "01-식도-양성.html",
+  "organ": "식도",
+  "nature": "양성",
+  "chapter": "01",
+  "sections": [
+   {
+    "id": "s-감염성-식도염",
+    "title": "1. 감염성 식도염",
+    "note": false
+   },
+   {
+    "id": "s-호산구-식도염-eosinophilic-esophagitis-eoe",
+    "title": "2. 호산구 식도염 (Eosinophilic esophagitis, EoE)",
+    "note": false
+   },
+   {
+    "id": "s-부식성-식도염-corrosive-esophagitis",
+    "title": "3. 부식성 식도염 (Corrosive esophagitis)",
+    "note": false
+   },
+   {
+    "id": "s-약제성-식도염-pill-induced-esophagitis",
+    "title": "4. 약제성 식도염 (Pill-induced esophagitis)",
+    "note": false
+   },
+   {
+    "id": "s-sloughing-esophagitis-eds-exfoliative-esophagitis",
+    "title": "5. Sloughing esophagitis (EDS, Exfoliative esophagitis)",
+    "note": false
+   },
+   {
+    "id": "s-식도-화상-esophageal-burn",
+    "title": "6. 식도 화상 (Esophageal burn)",
+    "note": false
+   },
+   {
+    "id": "s-식도-이물-esophageal-foreign-body",
+    "title": "7. 식도 이물 (Esophageal foreign body)",
+    "note": false
+   },
+   {
+    "id": "s-식도-melanocytosis-melanosis",
+    "title": "8. 식도 melanocytosis (Melanosis)",
+    "note": false
+   },
+   {
+    "id": "s-식도-이소성-위점막-inlet-patch-heterotopic-gastric-mucosa",
+    "title": "9. 식도 이소성 위점막 (Inlet patch / Heterotopic gastric mucosa)",
+    "note": false
+   },
+   {
+    "id": "s-위식도역류질환의-내시경-소견",
+    "title": "10. 위식도역류질환의 내시경 소견",
+    "note": true
+   },
+   {
+    "id": "s-상위-개념과-용어",
+    "title": "상위 개념과 용어",
+    "note": false
+   },
+   {
+    "id": "s-la-classification",
+    "title": "LA classification",
+    "note": false
+   },
+   {
+    "id": "s-치료",
+    "title": "치료",
+    "note": false
+   },
+   {
+    "id": "s-양성자펌프억제제-ppi",
+    "title": "11. 양성자펌프억제제(PPI)",
+    "note": false
+   },
+   {
+    "id": "s-ppi-부작용",
+    "title": "12. PPI 부작용",
+    "note": false
+   },
+   {
+    "id": "s-p-cab-tegoprazan-케이캡-k-cab",
+    "title": "13. P-CAB — tegoprazan(케이캡, K-CAB)",
+    "note": false
+   },
+   {
+    "id": "s-비약물요법과-ppi-용법-gerd-faq",
+    "title": "14. 비약물요법과 PPI 용법 — GERD FAQ",
+    "note": false
+   },
+   {
+    "id": "s-무증상-역류성-식도염",
+    "title": "15. 무증상 역류성 식도염",
+    "note": false
+   },
+   {
+    "id": "s-acid-pocket",
+    "title": "16. Acid pocket",
+    "note": false
+   },
+   {
+    "id": "s-보초-용종-sentinel-polyp",
+    "title": "17. 보초 용종(sentinel polyp)",
+    "note": false
+   },
+   {
+    "id": "s-불응성-refractory-gerd",
+    "title": "18. 불응성(refractory) GERD",
+    "note": false
+   },
+   {
+    "id": "s-항역류-치료-내과적-치료와의-위치-lars-stretta",
+    "title": "19. 항역류 치료 — 내과적 치료와의 위치, LARS, Stretta",
+    "note": false
+   },
+   {
+    "id": "s-바렛식도-barrett-s-esophagus",
+    "title": "20. 바렛식도(Barrett's esophagus)",
+    "note": true
+   },
+   {
+    "id": "s-정의",
+    "title": "정의",
+    "note": false
+   },
+   {
+    "id": "s-국내에서의-위치-expert-positioning",
+    "title": "국내에서의 위치 — expert positioning",
+    "note": false
+   },
+   {
+    "id": "s-바렛식도-faq와-이형성-감시",
+    "title": "21. 바렛식도 FAQ와 이형성 감시",
+    "note": false
+   },
+   {
+    "id": "s-식도-게실-esophageal-diverticulum",
+    "title": "22. 식도 게실 (Esophageal diverticulum)",
+    "note": false
+   },
+   {
+    "id": "s-식도질환-증례와-구강-인후두-병변",
+    "title": "23. 식도질환 증례와 구강·인후두 병변",
+    "note": false
+   },
+   {
+    "id": "s-식도-정맥류-esophageal-varix",
+    "title": "24. 식도 정맥류 (Esophageal varix)",
+    "note": false
+   },
+   {
+    "id": "s-식도-누공-esophageal-fistula-과-내시경-음압-치료-evac",
+    "title": "25. 식도 누공 (Esophageal fistula)과 내시경 음압 치료(EVAC)",
+    "note": false
+   },
+   {
+    "id": "s-식도-이완불능증-achalasia-과-poem",
+    "title": "26. 식도 이완불능증 (Achalasia)과 POEM",
+    "note": false
+   },
+   {
+    "id": "s-식도-유두종-점막하종양-과립세포종",
+    "title": "27. 식도 유두종·점막하종양·과립세포종",
+    "note": false
+   },
+   {
+    "id": "s-mallory-weiss-tear-위식도열공열상",
+    "title": "28. Mallory-Weiss tear (위식도열공열상)",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "29. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "02-식도-악성.html": {
+  "file": "02-식도-악성.html",
+  "organ": "식도",
+  "nature": "악성",
+  "chapter": "02",
+  "sections": [
+   {
+    "id": "s-식도암-개요와-내시경-분류",
+    "title": "1. 식도암 개요와 내시경 분류",
+    "note": false
+   },
+   {
+    "id": "s-조기식도암의-심달도와-림프절-전이-왜-중요한가",
+    "title": "2. 조기식도암의 심달도와 림프절 전이 — 왜 중요한가",
+    "note": false
+   },
+   {
+    "id": "s-표재성-편평세포암의-내시경-소견-요오드-nbi-확대",
+    "title": "3. 표재성 편평세포암의 내시경 소견 — 요오드·NBI·확대",
+    "note": false
+   },
+   {
+    "id": "s-carcinoma-in-situ의-함정-암은-암인데-암이-아님",
+    "title": "4. carcinoma in situ의 함정 — \"암은 암인데 암이 아님\"",
+    "note": false
+   },
+   {
+    "id": "s-조기식도암의-내시경-치료-esd-emr-와-적응",
+    "title": "5. 조기식도암의 내시경 치료(ESD/EMR)와 적응",
+    "note": false
+   },
+   {
+    "id": "s-식도-선암과-바렛식도선암",
+    "title": "6. 식도 선암과 바렛식도선암",
+    "note": false
+   },
+   {
+    "id": "s-병기-진단-내시경-eus-ct-pet",
+    "title": "7. 병기 진단 — 내시경, EUS, CT/PET",
+    "note": false
+   },
+   {
+    "id": "s-치료의-큰-틀-내시경-수술-화학방사선요법",
+    "title": "8. 치료의 큰 틀 — 내시경·수술·화학방사선요법",
+    "note": false
+   },
+   {
+    "id": "s-식도암-수술-ivor-lewis와-3-field-dissection",
+    "title": "9. 식도암 수술 — Ivor-Lewis와 3-field dissection",
+    "note": false
+   },
+   {
+    "id": "s-식도암의-림프절-전이와-명명법",
+    "title": "10. 식도암의 림프절·전이와 명명법",
+    "note": false
+   },
+   {
+    "id": "s-esd-후-협착-예방과-치료",
+    "title": "11. ESD 후 협착 — 예방과 치료",
+    "note": false
+   },
+   {
+    "id": "s-식도-흑색종-esophageal-melanoma",
+    "title": "12. 식도 흑색종 (Esophageal melanoma)",
+    "note": false
+   },
+   {
+    "id": "s-gastric-tube-cancer-식도-재건-위관암",
+    "title": "13. Gastric tube cancer — 식도 재건 위관암",
+    "note": false
+   },
+   {
+    "id": "s-전이성-및-기타-피부-흑색종-전이와-melanocytosis",
+    "title": "14. 전이성 및 기타 — 피부 흑색종 전이와 melanocytosis",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "15. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "03-위-양성.html": {
+  "file": "03-위-양성.html",
+  "organ": "위",
+  "nature": "양성",
+  "chapter": "03",
+  "sections": [
+   {
+    "id": "s-내시경-해부학과-정상-위내시경",
+    "title": "1. 내시경 해부학과 정상 위내시경",
+    "note": false
+   },
+   {
+    "id": "s-위게실-gastric-diverticulum",
+    "title": "2. 위게실 (Gastric diverticulum)",
+    "note": false
+   },
+   {
+    "id": "s-situs-inversus-자리바뀜-내장역위증",
+    "title": "3. Situs inversus (자리바뀜, 내장역위증)",
+    "note": false
+   },
+   {
+    "id": "s-혈관이형성증-angiodysplasia",
+    "title": "4. 혈관이형성증 (Angiodysplasia)",
+    "note": false
+   },
+   {
+    "id": "s-helicobacter-pylori-감염-개요와-진단",
+    "title": "5. Helicobacter pylori — 감염 개요와 진단",
+    "note": false
+   },
+   {
+    "id": "s-h-pylori-제균-적응증과-표준-처방",
+    "title": "6. H. pylori 제균 적응증과 표준 처방",
+    "note": false
+   },
+   {
+    "id": "s-h-pylori-제균치료-투약-시점",
+    "title": "7. H. pylori 제균치료 투약 시점",
+    "note": false
+   },
+   {
+    "id": "s-항생제-내성과-맞춤치료-tailored-therapy",
+    "title": "8. 항생제 내성과 맞춤치료 (Tailored therapy)",
+    "note": false
+   },
+   {
+    "id": "s-특수한-상황의-제균치료",
+    "title": "9. 특수한 상황의 제균치료",
+    "note": false
+   },
+   {
+    "id": "s-h-pylori-faq",
+    "title": "10. H. pylori FAQ",
+    "note": false
+   },
+   {
+    "id": "s-만성위염-개요와-kyoto-위염-분류",
+    "title": "11. 만성위염 개요와 Kyoto 위염 분류",
+    "note": false
+   },
+   {
+    "id": "s-쓰지-말아야-할-용어-담즙-역류",
+    "title": "12. 쓰지 말아야 할 용어 — 담즙 역류",
+    "note": false
+   },
+   {
+    "id": "s-h-pylori-위염-helicobacter-gastritis",
+    "title": "13. H. pylori 위염 (Helicobacter gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-비위축성-위염-non-atrophic-gastritis",
+    "title": "14. 비위축성 위염 (Non-atrophic gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-위축성-위염-atrophic-gastritis",
+    "title": "15. 위축성 위염 (Atrophic gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-화생성-위염-장상피화생-metaplastic-gastritis",
+    "title": "16. 화생성 위염 (장상피화생, Metaplastic gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-미란성-위염과-단일-미란-erosive-gastritis-amp-single-erosion",
+    "title": "17. 미란성 위염과 단일 미란 (Erosive gastritis &amp; single erosion)",
+    "note": false
+   },
+   {
+    "id": "s-prepyloric-erosion-날문인접-미란",
+    "title": "18. Prepyloric erosion (날문인접 미란)",
+    "note": false
+   },
+   {
+    "id": "s-비후성-위염-hypertrophic-gastritis",
+    "title": "19. 비후성 위염 (Hypertrophic gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-출혈성-위염과-hematin",
+    "title": "20. 출혈성 위염과 hematin",
+    "note": false
+   },
+   {
+    "id": "s-림프여포성-위염-결절성-위염-lymphofollicular-gastritis",
+    "title": "21. 림프여포성 위염 (결절성 위염, Lymphofollicular gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-agml-급성위점막병변-acute-gastric-mucosal-lesion",
+    "title": "22. AGML (급성위점막병변, Acute Gastric Mucosal Lesion)",
+    "note": false
+   },
+   {
+    "id": "s-방사선-관련-위장관-손상-radiation-induced-gi-injury",
+    "title": "23. 방사선 관련 위장관 손상 (Radiation-induced GI injury)",
+    "note": false
+   },
+   {
+    "id": "s-자가면역위염-autoimmune-gastritis",
+    "title": "24. 자가면역위염 (Autoimmune gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-cmv-위염-cmv-gastritis",
+    "title": "25. CMV 위염 (CMV gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-위매독-gastric-syphilis",
+    "title": "26. 위매독 (Gastric syphilis)",
+    "note": false
+   },
+   {
+    "id": "s-소화성-궤양-개요-peptic-ulcer",
+    "title": "27. 소화성 궤양 개요 (Peptic ulcer)",
+    "note": false
+   },
+   {
+    "id": "s-위궤양-gastric-ulcer-소견-stage-악성-감별",
+    "title": "28. 위궤양 (Gastric ulcer) — 소견·stage·악성 감별",
+    "note": true
+   },
+   {
+    "id": "s-위궤양-vs-조기-위암",
+    "title": "위궤양 vs (조기) 위암",
+    "note": false
+   },
+   {
+    "id": "s-감별-실전-요령",
+    "title": "감별 실전 요령",
+    "note": false
+   },
+   {
+    "id": "s-조직검사-개수와-위치",
+    "title": "조직검사 — 개수와 위치",
+    "note": false
+   },
+   {
+    "id": "s-위선종-esd-emr-후-상향-보고",
+    "title": "위선종 — ESD/EMR 후 상향 보고",
+    "note": false
+   },
+   {
+    "id": "s-nsaid-aspirin-관련-위장관-합병증",
+    "title": "29. NSAID/aspirin 관련 위장관 합병증",
+    "note": false
+   },
+   {
+    "id": "s-출혈성-궤양과-지혈술-forrest-분류-내시경-지혈-고용량-ppi",
+    "title": "30. 출혈성 궤양과 지혈술 (Forrest 분류 · 내시경 지혈 + 고용량 PPI)",
+    "note": false
+   },
+   {
+    "id": "s-불응성-궤양-refractory-ulcer",
+    "title": "31. 불응성 궤양 (Refractory ulcer)",
+    "note": false
+   },
+   {
+    "id": "s-위용종-총론-gastric-polyp",
+    "title": "32. 위용종 총론 (Gastric polyp)",
+    "note": false
+   },
+   {
+    "id": "s-위저선용종과-위저선용종증-fundic-gland-polyp-polyposis",
+    "title": "33. 위저선용종과 위저선용종증 (Fundic gland polyp & polyposis)",
+    "note": false
+   },
+   {
+    "id": "s-atypical-glands-atypia-비정형",
+    "title": "34. Atypical glands / Atypia (비정형)",
+    "note": false
+   },
+   {
+    "id": "s-위선종과-이형성-gastric-adenoma-dysplasia",
+    "title": "35. 위선종과 이형성 (Gastric adenoma / dysplasia)",
+    "note": false
+   },
+   {
+    "id": "s-gave-위전정부-혈관확장증-gastric-antral-vascular-ectasia",
+    "title": "36. GAVE (위전정부 혈관확장증, Gastric antral vascular ectasia)",
+    "note": false
+   },
+   {
+    "id": "s-급성봉소위염-phlegmonous-gastritis",
+    "title": "37. 급성봉소위염 (Phlegmonous gastritis)",
+    "note": false
+   },
+   {
+    "id": "s-아니사키스증-gastric-anisakiasis",
+    "title": "38. 아니사키스증 (Gastric anisakiasis)",
+    "note": false
+   },
+   {
+    "id": "s-문맥압-항진성-위병증-portal-hypertensive-gastropathy-phg",
+    "title": "39. 문맥압 항진성 위병증 (Portal hypertensive gastropathy, PHG)",
+    "note": false
+   },
+   {
+    "id": "s-위-정맥류-gastric-varix",
+    "title": "40. 위 정맥류 (Gastric varix)",
+    "note": false
+   },
+   {
+    "id": "s-위-점막하종양-smt-총론",
+    "title": "41. 위 점막하종양(SMT) 총론",
+    "note": false
+   },
+   {
+    "id": "s-신경초종-schwannoma",
+    "title": "42. 신경초종 (Schwannoma)",
+    "note": false
+   },
+   {
+    "id": "s-외부압박-extrinsic-compression",
+    "title": "43. 외부압박 (Extrinsic compression)",
+    "note": false
+   },
+   {
+    "id": "s-이소성-췌장-ectopic-pancreas",
+    "title": "44. 이소성 췌장 (Ectopic pancreas)",
+    "note": false
+   },
+   {
+    "id": "s-gist-위장관-간질종양",
+    "title": "45. GIST (위장관 간질종양)",
+    "note": false
+   },
+   {
+    "id": "s-위-신경내분비종양-net-carcinoid",
+    "title": "46. 위 신경내분비종양 (NET/carcinoid)",
+    "note": false
+   },
+   {
+    "id": "s-황색종-xanthoma",
+    "title": "47. 황색종 (Xanthoma)",
+    "note": false
+   },
+   {
+    "id": "s-지방종-lipoma",
+    "title": "48. 지방종 (Lipoma)",
+    "note": false
+   },
+   {
+    "id": "s-위석-bezoar",
+    "title": "49. 위석 (Bezoar)",
+    "note": false
+   },
+   {
+    "id": "s-위루술-peg-percutaneous-endoscopic-gastrostomy",
+    "title": "50. 위루술 (PEG, percutaneous endoscopic gastrostomy)",
+    "note": false
+   },
+   {
+    "id": "s-기능성-소화불량증-functional-dyspepsia-fd",
+    "title": "51. 기능성 소화불량증 (Functional dyspepsia, FD)",
+    "note": false
+   },
+   {
+    "id": "s-lecs-laparoscopy-and-endoscopy-cooperative-surgery",
+    "title": "52. LECS (Laparoscopy and Endoscopy Cooperative Surgery)",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "53. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "04-위-악성.html": {
+  "file": "04-위-악성.html",
+  "organ": "위",
+  "nature": "악성",
+  "chapter": "04",
+  "sections": [
+   {
+    "id": "s-위암을-놓치지-않는-내시경-진단-전략",
+    "title": "1. 위암을 놓치지 않는 내시경 — 진단 전략",
+    "note": true
+   },
+   {
+    "id": "s-조기위암의-육안-분류와-아틀라스",
+    "title": "2. 조기위암의 육안 분류와 아틀라스",
+    "note": false
+   },
+   {
+    "id": "s-진행성-위암과-borrmann-분류",
+    "title": "3. 진행성 위암과 Borrmann 분류",
+    "note": false
+   },
+   {
+    "id": "s-어떤-위암이-중요한가",
+    "title": "4. 어떤 위암이 중요한가",
+    "note": false
+   },
+   {
+    "id": "s-위암-수술-후-내시경-소견",
+    "title": "5. 위암 수술 후 내시경 소견",
+    "note": false
+   },
+   {
+    "id": "s-위식도접합부암-gej-cancer",
+    "title": "6. 위식도접합부암 (GEJ cancer)",
+    "note": false
+   },
+   {
+    "id": "s-위암-검진-스크리닝",
+    "title": "7. 위암 검진·스크리닝",
+    "note": false
+   },
+   {
+    "id": "s-조직형-특수형-위암",
+    "title": "8. 조직형·특수형 위암",
+    "note": false
+   },
+   {
+    "id": "s-위장관-병리-개요와-위암-조직형",
+    "title": "9. 위장관 병리 개요와 위암 조직형",
+    "note": false
+   },
+   {
+    "id": "s-미분화-조직형이라는-용어에-대하여-undifferentiated",
+    "title": "10. 미분화 조직형이라는 용어에 대하여 (undifferentiated)",
+    "note": false
+   },
+   {
+    "id": "s-위암의-병기-tnm-8판",
+    "title": "11. 위암의 병기 — TNM 8판",
+    "note": false
+   },
+   {
+    "id": "s-침윤-깊이-심달도-조기위암과-진행성위암의-구분",
+    "title": "12. 침윤 깊이(심달도) — 조기위암과 진행성위암의 구분",
+    "note": false
+   },
+   {
+    "id": "s-위암-faq-실전에서-자주-받는-질문",
+    "title": "13. 위암 FAQ — 실전에서 자주 받는 질문",
+    "note": false
+   },
+   {
+    "id": "s-esd-배우기와-esd-교육",
+    "title": "14. ESD 배우기와 ESD 교육",
+    "note": false
+   },
+   {
+    "id": "s-esd-적응-기준-절대적응증과-확대적응증",
+    "title": "15. ESD 적응 기준 — 절대적응증과 확대적응증",
+    "note": true
+   },
+   {
+    "id": "s-정의와-병기",
+    "title": "정의와 병기",
+    "note": false
+   },
+   {
+    "id": "s-내시경적-절제-적응",
+    "title": "내시경적 절제 적응",
+    "note": false
+   },
+   {
+    "id": "s-절제-후-병리-판정과-추가-수술",
+    "title": "절제 후 — 병리 판정과 추가 수술",
+    "note": false
+   },
+   {
+    "id": "s-추적",
+    "title": "추적",
+    "note": false
+   },
+   {
+    "id": "s-확대적응증과-림프절-전이-위험",
+    "title": "16. 확대적응증과 림프절 전이 위험",
+    "note": false
+   },
+   {
+    "id": "s-미분화형-림프절-전이-위험과-고도이형성-esd",
+    "title": "17. 미분화형 림프절 전이 위험과 고도이형성 ESD",
+    "note": false
+   },
+   {
+    "id": "s-시술-전후-진단군-분류-diagnostic-group-와-ecura",
+    "title": "18. 시술 전후 진단군 분류(diagnostic group)와 eCura",
+    "note": false
+   },
+   {
+    "id": "s-궤양과-esd-ulcer-finding의-함정",
+    "title": "19. 궤양과 ESD — ulcer finding의 함정",
+    "note": false
+   },
+   {
+    "id": "s-esd-후-내시경-소견과-추적",
+    "title": "20. ESD 후 내시경 소견과 추적",
+    "note": false
+   },
+   {
+    "id": "s-완전절제-후-장기성적",
+    "title": "21. 완전절제 후 장기성적",
+    "note": false
+   },
+   {
+    "id": "s-점막하침윤-sm-invasion",
+    "title": "22. 점막하침윤(SM invasion)",
+    "note": false
+   },
+   {
+    "id": "s-이시성-재발-metachronous-recurrence",
+    "title": "23. 이시성 재발(metachronous recurrence)",
+    "note": false
+   },
+   {
+    "id": "s-크기-size-의-측정",
+    "title": "24. 크기(size)의 측정",
+    "note": false
+   },
+   {
+    "id": "s-위-림프종-개요-gastric-lymphoma",
+    "title": "25. 위 림프종 개요 (Gastric lymphoma)",
+    "note": false
+   },
+   {
+    "id": "s-미만성-거대-b세포-림프종-dlbcl-diffuse-large-b-cell-lymphoma",
+    "title": "26. 미만성 거대 B세포 림프종 (DLBCL, Diffuse large B-cell lymphoma)",
+    "note": false
+   },
+   {
+    "id": "s-malt-림프종-maltoma",
+    "title": "27. MALT 림프종 (MALToma)",
+    "note": false
+   },
+   {
+    "id": "s-외투세포-림프종-mantle-cell-lymphoma",
+    "title": "28. 외투세포 림프종 (Mantle cell lymphoma)",
+    "note": false
+   },
+   {
+    "id": "s-nk-t-세포-림프종-extranodal-nk-t-cell-lymphoma-nasal-ty",
+    "title": "29. NK/T 세포 림프종 (Extranodal NK/T-cell lymphoma, nasal type)",
+    "note": false
+   },
+   {
+    "id": "s-버킷-림프종-burkitt-lymphoma",
+    "title": "30. 버킷 림프종 (Burkitt lymphoma)",
+    "note": false
+   },
+   {
+    "id": "s-위암-항암치료-표적치료-면역치료",
+    "title": "31. 위암 항암치료 · 표적치료 · 면역치료",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "32. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "05-십이지장-양성.html": {
+  "file": "05-십이지장-양성.html",
+  "organ": "십이지장",
+  "nature": "양성",
+  "chapter": "05",
+  "sections": [
+   {
+    "id": "s-십이지장의-내시경-해부와-위치-기술",
+    "title": "1. 십이지장의 내시경 해부와 위치 기술",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-궤양-duodenal-ulcer",
+    "title": "2. 십이지장 궤양 (Duodenal ulcer)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장염-duodenitis",
+    "title": "3. 십이지장염 (Duodenitis)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-이소성-위점막-heterotopic-gastric-mucosa-gastric-me",
+    "title": "4. 십이지장 이소성 위점막 (Heterotopic gastric mucosa / gastric metaplasia)",
+    "note": false
+   },
+   {
+    "id": "s-브루너샘-과형성-brunner-s-gland-hyperplasia",
+    "title": "5. 브루너샘 과형성 (Brunner's gland hyperplasia)",
+    "note": false
+   },
+   {
+    "id": "s-림프관확장증-intestinal-lymphangiectasia",
+    "title": "6. 림프관확장증 (Intestinal lymphangiectasia)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-이소성-췌장-pancreatic-heterotopia",
+    "title": "7. 십이지장 이소성 췌장 (Pancreatic heterotopia)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-점막하종양-duodenal-smt-gist-포함",
+    "title": "8. 십이지장 점막하종양 (Duodenal SMT) — GIST 포함",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-게실-duodenal-diverticulum",
+    "title": "9. 십이지장 게실 (Duodenal diverticulum)",
+    "note": false
+   },
+   {
+    "id": "s-henoch-sch-nlein-자반증의-위장관-침범-hsp",
+    "title": "10. Henoch-Schönlein 자반증의 위장관 침범 (HSP)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-선종-duodenal-adenoma",
+    "title": "11. 십이지장 선종 (Duodenal adenoma)",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "12. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "06-십이지장-악성.html": {
+  "file": "06-십이지장-악성.html",
+  "organ": "십이지장",
+  "nature": "악성",
+  "chapter": "06",
+  "sections": [
+   {
+    "id": "s-소장암-개요와-십이지장",
+    "title": "1. 소장암 개요와 십이지장",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-선암-duodenal-adenocarcinoma",
+    "title": "2. 십이지장 선암 (Duodenal adenocarcinoma)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-전구병변과-조기암-adenoma-carcinoma",
+    "title": "3. 십이지장 전구병변과 조기암 (Adenoma → Carcinoma)",
+    "note": false
+   },
+   {
+    "id": "s-유두부-선종과-암-ampullary-adenoma-amp-adenocarcinoma-aov",
+    "title": "4. 유두부 선종과 암 (Ampullary adenoma &amp; adenocarcinoma, AoV)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-신경내분비종양-net-carcinoid",
+    "title": "5. 십이지장 신경내분비종양 (NET / Carcinoid)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-림프종-extragastric-maltoma-등",
+    "title": "6. 십이지장 림프종 (Extragastric MALToma 등)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-전이암-duodenal-metastasis",
+    "title": "7. 십이지장 전이암 (Duodenal metastasis)",
+    "note": false
+   },
+   {
+    "id": "s-십이지장-정맥류-duodenal-varix-악성-출혈-감별",
+    "title": "8. 십이지장 정맥류 (Duodenal varix) — 악성·출혈 감별",
+    "note": false
+   },
+   {
+    "id": "s-치료-옵션-종합-내시경-vs-수술-vs-항암",
+    "title": "9. 치료 옵션 종합 (내시경 vs 수술 vs 항암)",
+    "note": false
+   },
+   {
+    "id": "s-내시경-치료-합병증-십이지장-천공",
+    "title": "10. 내시경 치료 합병증 — 십이지장 천공",
+    "note": false
+   },
+   {
+    "id": "s-이미지-소견-치료-정리표",
+    "title": "11. 이미지–소견–치료 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ },
+ "00-총론.html": {
+  "file": "00-총론.html",
+  "organ": "총론",
+  "nature": "공통",
+  "chapter": "00",
+  "sections": [
+   {
+    "id": "s-검사-전-준비와-내시경실-세팅",
+    "title": "1. 검사 전 준비와 내시경실 세팅",
+    "note": false
+   },
+   {
+    "id": "s-내시경-잡기-자세-torque-rotation-ergonomics",
+    "title": "2. 내시경 잡기·자세·torque rotation (ergonomics)",
+    "note": false
+   },
+   {
+    "id": "s-목넘김-삽입법-과-upper-esophageal-sphincter-통과",
+    "title": "3. 목넘김(삽입법)과 upper esophageal sphincter 통과",
+    "note": false
+   },
+   {
+    "id": "s-위의-내시경-해부와-위치기술법",
+    "title": "4. 위의 내시경 해부와 위치기술법",
+    "note": false
+   },
+   {
+    "id": "s-표준-소견기술법-dex",
+    "title": "5. 표준 소견기술법 (DEX)",
+    "note": false
+   },
+   {
+    "id": "s-색소내시경-영상증강내시경-iee-확대내시경",
+    "title": "6. 색소내시경·영상증강내시경(IEE)·확대내시경",
+    "note": false
+   },
+   {
+    "id": "s-병소-크기-측정과-내시경-사진-촬영",
+    "title": "7. 병소 크기 측정과 내시경 사진 촬영",
+    "note": false
+   },
+   {
+    "id": "s-조직검사-biopsy",
+    "title": "8. 조직검사 (biopsy)",
+    "note": false
+   },
+   {
+    "id": "s-내시경-용어-분류법-위장관-병리-개요",
+    "title": "9. 내시경 용어·분류법·위장관 병리 개요",
+    "note": false
+   },
+   {
+    "id": "s-진정-sedation",
+    "title": "10. 진정 (sedation)",
+    "note": false
+   },
+   {
+    "id": "s-진경제-antispasmodics-와-점액용해제",
+    "title": "11. 진경제(antispasmodics)와 점액용해제",
+    "note": false
+   },
+   {
+    "id": "s-항혈소판제-항응고제-관리와-bridging",
+    "title": "12. 항혈소판제·항응고제 관리와 bridging",
+    "note": false
+   },
+   {
+    "id": "s-예방적-항생제-감염관리-소독",
+    "title": "13. 예방적 항생제·감염관리·소독",
+    "note": false
+   },
+   {
+    "id": "s-고위험-환자-안전-임신-천식-pacemaker-등",
+    "title": "14. 고위험 환자·안전 (임신·천식·pacemaker 등)",
+    "note": false
+   },
+   {
+    "id": "s-합병증-천공-mallory-weiss-clip-응급-당직-내시경",
+    "title": "15. 합병증: 천공·Mallory-Weiss·clip·응급/당직 내시경",
+    "note": false
+   },
+   {
+    "id": "s-내시경-기구-관리와-고장-대처",
+    "title": "16. 내시경 기구 관리와 고장 대처",
+    "note": false
+   },
+   {
+    "id": "s-위내시경-질지표와-검사-시간",
+    "title": "17. 위내시경 질지표와 검사 시간",
+    "note": false
+   },
+   {
+    "id": "s-상황별-대응-정리표",
+    "title": "18. 상황별 대응 정리표",
+    "note": false
+   }
+  ],
+  "organs": [
+   {
+    "label": "식도",
+    "benign": "01-식도-양성.html",
+    "malignant": "02-식도-악성.html"
+   },
+   {
+    "label": "위",
+    "benign": "03-위-양성.html",
+    "malignant": "04-위-악성.html"
+   },
+   {
+    "label": "십이지장",
+    "benign": "05-십이지장-양성.html",
+    "malignant": "06-십이지장-악성.html"
+   }
+  ],
+  "general": {
+   "file": "00-총론.html",
+   "label": "총론"
+  }
+ }
+}

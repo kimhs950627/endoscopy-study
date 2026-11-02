@@ -8,8 +8,14 @@ cd "$(dirname "$0")/.."
 
 TARGET="${1:-all}"
 
-echo "→ notes → html"
+echo "→ notes → 페이지 (cfs 추적 간격 등)"
 python3 tools/build_notes.py
+
+echo "→ 학회노트를 각 질환 절 안에 삽입"
+( cd tools && python3 apply_notes.py )
+
+echo "→ 질환 서브탭 재생성"
+python3 tools/build_nav.py
 
 echo "→ chapters → book.html"
 python3 tools/build_book.py

@@ -1,0 +1,32 @@
+[
+  {
+    "file": "notes/egd-gerd.md",
+    "chapter": "egd/01-식도-양성.html",
+    "h2": "위식도역류질환의 내시경 소견",
+    "label": "GERD · LA 분류 · 치료"
+  },
+  {
+    "file": "notes/egd-barrett.md",
+    "chapter": "egd/01-식도-양성.html",
+    "h2": "바렛식도",
+    "label": "Barrett · expert positioning"
+  },
+  {
+    "file": "notes/egd-gu-cancer.md",
+    "chapter": "egd/03-위-양성.html",
+    "h2": "위궤양",
+    "label": "궤양 vs 위암 · 조직검사"
+  },
+  {
+    "file": "notes/egd-egc-observe.md",
+    "chapter": "egd/04-위-악성.html",
+    "h2": "위암을 놓치지 않는 내시경",
+    "label": "관찰 술기"
+  },
+  {
+    "file": "notes/egd-egc-esd.md",
+    "chapter": "egd/04-위-악성.html",
+    "h2": "ESD 적응 기준",
+    "label": "조기위암 ESD 적응과 추적"
+  }
+]

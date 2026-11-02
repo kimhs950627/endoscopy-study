@@ -6,7 +6,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 EGD = ROOT / "egd"
-FILES = sorted(p for p in EGD.glob("*.html") if p.name not in {"book.html", "conference-notes.html", "index.html"})
+FILES = sorted(p for p in EGD.glob("*.html") if p.name not in {"book.html", "index.html"})
 
 
 def check(f: Path) -> dict:

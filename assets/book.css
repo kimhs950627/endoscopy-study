@@ -146,3 +146,75 @@ footer{margin-top:50px;padding-top:18px;border-top:1px solid var(--line);color:v
 }
 #totop{position:fixed;right:18px;bottom:18px;z-index:60;background:var(--acc);color:#fff;border:0;border-radius:50%;
   width:46px;height:46px;font-size:20px;cursor:pointer;box-shadow:var(--shadow)}
+
+/* ================= 질환 서브탭 (dx nav) ================= */
+body.dx .topbar{position:static}
+body.dx .layout{grid-template-columns:minmax(0,1fr);max-width:1080px;padding-top:0}
+body.dx nav.toc{display:none}
+body.dx main{width:100%;max-width:940px;margin-inline:auto}
+
+.dxbar{position:sticky;top:0;z-index:40;background:rgba(247,245,239,.95);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.dxrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap;max-width:1080px;margin:0 auto;padding:9px 22px 7px}
+.dxseg{display:flex;border:1px solid var(--line-2);border-radius:8px;overflow:hidden;background:var(--card)}
+.dxseg-item{padding:5px 13px;font-size:13.5px;color:var(--mut);text-decoration:none;
+  border-right:1px solid var(--line);white-space:nowrap}
+.dxseg-item:last-child{border-right:0}
+.dxseg-item:hover{background:var(--bg);color:var(--acc)}
+.dxseg-item.on{background:var(--acc);color:#fff;font-weight:600}
+.dxsep{color:var(--line-2);font-size:15px;padding:0 2px}
+.dxseg-nature{border-style:dashed}
+.dxseg-nature .dxseg-item.on{background:var(--ink);color:var(--bg)}
+.dxseg-nature .dxseg-item{font-weight:600}
+.dxhome{margin-left:auto;font-size:13px;color:var(--mut);text-decoration:none;padding:4px 8px;border-radius:6px}
+.dxhome:hover{color:var(--acc);background:var(--bg)}
+
+.dxchips{display:flex;gap:6px;overflow-x:auto;max-width:1080px;margin:0 auto;
+  padding:0 22px 9px;scrollbar-width:thin;scrollbar-color:var(--line-2) transparent;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 30px),transparent 100%);
+  mask-image:linear-gradient(90deg,transparent 0,#000 14px,#000 calc(100% - 30px),transparent 100%)}
+.dxchips::-webkit-scrollbar{height:4px}
+.dxchips::-webkit-scrollbar-thumb{background:var(--line-2);border-radius:2px}
+.dxchip{flex:0 0 auto;padding:4px 11px;border-radius:999px;border:1px solid var(--line);
+  background:var(--card);color:var(--mut);font-size:13px;text-decoration:none;white-space:nowrap;
+  transition:background .15s,color .15s,border-color .15s}
+.dxchip:hover{border-color:var(--acc);color:var(--acc)}
+.dxchip.on{background:var(--acc);border-color:var(--acc);color:#fff;font-weight:600}
+.dxchip.has-note::before{content:"◆";font-size:9px;color:var(--malig);margin-right:5px;vertical-align:1px}
+.dxchip.on.has-note::before{color:#fff}
+
+/* ================= 인라인 학회노트 ================= */
+.note-inline{margin:26px 0 30px;padding:16px 20px 18px;background:#FBFCFA;
+  border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:0 10px 10px 0}
+.note-inline > .note-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px;
+  padding-bottom:8px;border-bottom:1px dashed var(--line)}
+.note-inline .tag{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;color:var(--acc);text-transform:uppercase}
+.note-inline .note-h b{font-size:15px;color:var(--ink-2)}
+.note-inline .upd{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--mut)}
+.note-inline h2{font-family:var(--serif);font-weight:400;font-size:19px;border:0;margin:18px 0 8px;padding:0}
+.note-inline h2:first-of-type{margin-top:4px}
+.note-inline h3{font-size:16px;margin:15px 0 6px;color:var(--ink-2)}
+.note-inline p,.note-inline li{font-size:15px;line-height:1.68}
+.note-inline ul,.note-inline ol{padding-left:20px}
+.note-inline blockquote{margin:12px 0;padding:10px 14px;background:#EDF3EF;border-left:3px solid var(--acc);
+  border-radius:0 8px 8px 0;font-size:14.5px}
+.note-inline .tblwrap{margin:12px 0;box-shadow:none}
+.note-inline table{font-size:13.5px;min-width:0}
+
+@media (max-width:760px){
+  .topbar{flex-wrap:wrap;gap:6px;padding:8px 14px}
+  .topbar .brand{font-size:15px}
+  .topbar .chap{order:3;flex-basis:100%;font-size:12px;padding-left:1px}
+  .topbar .nav{margin-left:auto;display:flex;gap:4px}
+  .topbar .nav a{padding:4px 9px;font-size:12.5px;margin-left:0}
+  .layout{padding:14px 16px 70px}
+  .dxrow{padding:8px 16px 6px;gap:6px}
+  .dxseg-item{padding:5px 10px;font-size:13px}
+  .dxchips{padding:0 16px 8px}
+  .dxhome{display:none}
+}
+
+@media print{
+  .dxbar{display:none}
+  .note-inline{break-inside:auto;border-left-width:4px;background:#fff}
+}

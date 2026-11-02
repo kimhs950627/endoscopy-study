@@ -1,15 +1,4 @@
 {
-  "egd/conference-notes.html": {
-    "channel": "egd",
-    "kicker": "EGD · CONFERENCE NOTES",
-    "title": "학회노트 — 상부위장관",
-    "lead": "OneNote 『Books_for_Meds』의 학회 정리와 검진 프로토콜을 워크북에 맞춰 옮긴 것. 원문은 노트에 있고, 여기서는 내시경 판단에 바로 쓰이는 형태로 재편집한다. 갱신은 tools/sync-onenote.md 절차를 따른다.",
-    "files": [
-      "notes/egd-gerd-barrett.md",
-      "notes/egd-ugc-cancer.md",
-      "notes/egd-egc-esd.md"
-    ]
-  },
   "cfs/surveillance.html": {
     "channel": "cfs",
     "kicker": "CFS · SURVEILLANCE",

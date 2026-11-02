@@ -214,7 +214,6 @@ def page(item: dict, body: str, toc, sources) -> str:
   <nav>
     <a href="../egd/index.html" class="{"on" if channel == "egd" else ""}">EGD</a>
     <a href="../cfs/index.html" class="{"on" if channel == "cfs" else ""}">CFS</a>
-    <a href="../egd/conference-notes.html" class="{"on" if channel == "egd" else ""}">학회노트</a>
     <a href="../downloads/EGD-workbook.pdf">PDF</a>
   </nav>
 </header>

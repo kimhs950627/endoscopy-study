@@ -1,6 +1,6 @@
 ---
-title: 위궤양 · 미란 · 위암의 감별
-updated: 2026-11-02
+title: 위궤양 vs 위암 — 감별과 조직검사
+updated: 2026-11-03
 source: OneNote / Books_for_Meds / 검진 protocol, DDx / 위내시경 질환 Study
 ---
 

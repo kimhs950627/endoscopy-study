@@ -3,7 +3,7 @@
 
 Sources
   egd/00-총론.html … egd/06-십이지장-악성.html   chapter bodies (<main>…</main>)
-  egd/conference-notes.html                      OneNote-synced notes (rendered by build_notes.py)
+  (학회노트는 notes/*.md → tools/apply_notes.py 로 각 장의 해당 절 안에 삽입된다)
 
 Also stamps the "최종 갱신" date on egd/index.html so the cover never lies.
 """
@@ -26,7 +26,6 @@ ORDER = [
     "06-십이지장-악성.html",
 ]
 
-NOTES_PAGE = "conference-notes.html"
 
 
 def chapter_inner(path: Path) -> str:
@@ -58,9 +57,10 @@ def notes_inner(path: Path) -> str:
 COVER = """<section class="bookcover">
   <div class="kicker">EGD · UPPER GI · WORKBOOK 01</div>
   <h1>상부위장관 내시경<br>워크북</h1>
-  <p class="lead">총론 · 식도(양성/악성) · 위(양성/악성) · 십이지장(양성/악성) · 학회노트</p>
-  <p class="mut">EndoTODAY(endotoday.com, 이준행) 강의·아틀라스 기반 개인 학습용 정리 +
-  OneNote 학회 정리 동기화본.<br>약제는 실제 처방 약어로 표기.</p>
+  <p class="lead">총론 · 식도(양성/악성) · 위(양성/악성) · 십이지장(양성/악성)</p>
+  <p class="mut">이준행 교수님의 EndoTODAY(endotoday.com) 강의·아틀라스 기반 개인 학습용 정리.
+  원저작물의 권리는 원저자에게 있으며, 상업적 이용·재배포를 하지 않는다.</p>
+  <p class="mut">'학회노트' 표시가 붙은 부분은 본인 OneNote 학회 정리를 옮긴 것. 약제는 실제 처방 약어로 표기.</p>
   <p class="mut">최종 갱신 {stamp}</p>
 </section>"""
 
@@ -74,17 +74,6 @@ def main() -> None:
         cls = "bookchapter" + ("" if i == 0 else " newpage")
         parts.append(f'<section class="{cls}">\n{inner}\n</section>')
 
-    notes_file = EGD / NOTES_PAGE
-    if notes_file.exists():
-        parts.append(
-            '<section class="bookchapter newpage">\n'
-            '<div class="chapter-head"><div class="no">CHAPTER 07</div>'
-            "<h1>학회노트 — OneNote 동기화</h1>"
-            '<p class="lead">내가 학회에서 정리한 노트를 내시경 판단용으로 재편집한 것. '
-            "매 동기화마다 웹과 PDF가 같은 내용으로 다시 만들어진다.</p></div>\n"
-            + notes_inner(notes_file)
-            + "\n</section>"
-        )
 
     doc = f"""<!DOCTYPE html>
 <html lang="ko">
