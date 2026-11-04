@@ -1,4 +1,4 @@
-name: PDF (합본 재생성 · LFS)
+name: PDF (합본 재생성 · 릴리스 보관 2일)
 
 on:
   push:
@@ -8,6 +8,8 @@ on:
       - "notes/**"
       - "tools/**"
       - "assets/**"
+  schedule:
+    - cron: "0 19 * * *"   # 매일 04:00 KST — 오래된 PDF 정리 보장
   workflow_dispatch:
 
 permissions:
@@ -16,6 +18,9 @@ permissions:
 concurrency:
   group: pdf-build
   cancel-in-progress: true
+
+env:
+  KEEP_DAYS: "2"
 
 jobs:
   build:
@@ -45,38 +50,50 @@ jobs:
             sudo apt-get install -y -qq chromium-browser || sudo apt-get install -y -qq chromium
             CHROME_BIN="$(command -v chromium || command -v chromium-browser)"
           fi
-          echo "chrome: $CHROME_BIN"
           sudo tee /usr/local/bin/chrome-ci >/dev/null <<EOF
           #!/bin/sh
           exec "$CHROME_BIN" --no-sandbox --disable-dev-shm-usage --disable-gpu --font-render-hinting=none "\$@"
           EOF
           sudo chmod +x /usr/local/bin/chrome-ci
-          /usr/local/bin/chrome-ci --version
 
       - name: 합본 PDF 재생성
         run: |
           mkdir -p /tmp/opencode
           CHROME=/usr/local/bin/chrome-ci bash tools/build_pdf.sh egd
 
-      - name: 커밋·푸시 (LFS)
+      - name: HTML·book 커밋 (PDF 는 커밋하지 않는다)
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
-          git add -A
-          if git diff --staged --quiet; then
-            echo "변경 없음"
-            exit 0
+          git add -A -- . ':!downloads/*.pdf'
+          if git diff --staged --quiet; then echo "변경 없음"; else
+            git commit -m "chore(pdf): 합본·북마크 재생성 [skip ci]"
+            for i in 1 2 3; do git pull --rebase --autostash origin master && git push && break; echo retry $i; sleep 8; done
           fi
-          git commit -m "chore(pdf): 합본·북마크 재생성 [skip ci]"
-          for i in 1 2 3; do
-            git pull --rebase --autostash origin master && git push && break
-            echo "retry $i"; sleep 10
-          done
 
-      - name: 결과 요약
+      - name: PDF 릴리스 업로드 (날짜 태그)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          ls -lh downloads/EGD-workbook.pdf
-          echo "PDF: https://media.githubusercontent.com/media/${GITHUB_REPOSITORY}/master/downloads/EGD-workbook.pdf"
+          TAG="pdf-$(date -u +%Y%m%d)"
+          gh release view "$TAG" -R "$GITHUB_REPOSITORY" >/dev/null 2>&1 || \
+            gh release create "$TAG" -R "$GITHUB_REPOSITORY" --title "워크북 PDF $TAG" --notes "합본 PDF 자동 생성"
+          gh release upload "$TAG" downloads/EGD-workbook.pdf -R "$GITHUB_REPOSITORY" --clobber
+          echo "PDF: https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/EGD-workbook.pdf"
+
+      - name: 2일 지난 PDF 릴리스 삭제
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cutoff=$(date -u -d "-${KEEP_DAYS} days" +%Y%m%d)
+          gh release list -R "$GITHUB_REPOSITORY" --limit 100 --json tagName,createdAt \
+            --jq '.[] | select(.tagName|startswith("pdf-")) | .tagName' | while read -r tag; do
+              day="${tag#pdf-}"
+              if [ "$day" \< "$cutoff" ]; then
+                echo "삭제: $tag"
+                gh release delete "$tag" -R "$GITHUB_REPOSITORY" --yes --cleanup-tag || true
+              fi
+            done
