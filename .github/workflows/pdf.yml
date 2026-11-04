@@ -1,0 +1,75 @@
+name: PDF (합본 재생성 · LFS)
+
+on:
+  push:
+    paths:
+      - "egd/**"
+      - "cfs/**"
+      - "notes/**"
+      - "tools/**"
+      - "assets/**"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 의존성
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq git-lfs >/dev/null
+          git lfs install --local
+          pip install -q pypdf
+
+      - name: 크롬 확인
+        run: |
+          command -v google-chrome || command -v chromium || command -v chromium-browser || {
+            echo "chromium 설치 시도"
+            sudo apt-get install -y -qq chromium-browser || true
+          }
+          command -v google-chrome || command -v chromium || command -v chromium-browser
+
+      - name: 합본 PDF 재생성
+        run: |
+          mkdir -p /tmp/opencode
+          bash tools/build_pdf.sh egd
+
+      - name: 커밋·푸시 (LFS)
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git"
+          git add -A
+          if git diff --staged --quiet; then
+            echo "변경 없음"
+            exit 0
+          fi
+          git commit -m "chore(pdf): 합본·북마크 재생성 [skip ci]"
+          for i in 1 2 3; do
+            git pull --rebase --autostash origin master && git push && break
+            echo "retry $i"; sleep 10
+          done
+
+      - name: 결과 요약
+        run: |
+          ls -lh downloads/EGD-workbook.pdf
+          echo "PDF: https://media.githubusercontent.com/media/${GITHUB_REPOSITORY}/master/downloads/EGD-workbook.pdf"
