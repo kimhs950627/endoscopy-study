@@ -38,18 +38,25 @@ jobs:
           git lfs install --local
           pip install -q pypdf
 
-      - name: 크롬 확인
+      - name: 크롬 준비 (CI 는 --no-sandbox 필요)
         run: |
-          command -v google-chrome || command -v chromium || command -v chromium-browser || {
-            echo "chromium 설치 시도"
-            sudo apt-get install -y -qq chromium-browser || true
-          }
-          command -v google-chrome || command -v chromium || command -v chromium-browser
+          CHROME_BIN="$(command -v google-chrome || command -v chromium || command -v chromium-browser || true)"
+          if [ -z "$CHROME_BIN" ]; then
+            sudo apt-get install -y -qq chromium-browser || sudo apt-get install -y -qq chromium
+            CHROME_BIN="$(command -v chromium || command -v chromium-browser)"
+          fi
+          echo "chrome: $CHROME_BIN"
+          sudo tee /usr/local/bin/chrome-ci >/dev/null <<EOF
+          #!/bin/sh
+          exec "$CHROME_BIN" --no-sandbox --disable-dev-shm-usage --disable-gpu --font-render-hinting=none "\$@"
+          EOF
+          sudo chmod +x /usr/local/bin/chrome-ci
+          /usr/local/bin/chrome-ci --version
 
       - name: 합본 PDF 재생성
         run: |
           mkdir -p /tmp/opencode
-          bash tools/build_pdf.sh egd
+          CHROME=/usr/local/bin/chrome-ci bash tools/build_pdf.sh egd
 
       - name: 커밋·푸시 (LFS)
         env:
