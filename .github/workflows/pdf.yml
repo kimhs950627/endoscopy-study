@@ -58,7 +58,7 @@ jobs:
 
       - name: 합본 PDF 재생성
         run: |
-          mkdir -p /tmp/opencode
+          mkdir -p /tmp/opencode downloads
           CHROME=/usr/local/bin/chrome-ci bash tools/build_pdf.sh egd
 
       - name: HTML·book 커밋 (PDF 는 커밋하지 않는다)
