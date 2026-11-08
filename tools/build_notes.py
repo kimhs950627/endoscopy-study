@@ -89,6 +89,18 @@ def render_md(md: str) -> tuple[str, list[tuple[str, str, int]]]:
             i += 1
             continue
 
+        # image: ![caption](path)
+        m = re.match(r"^!\[([^\]]*)\]\(([^)]+)\)$", stripped)
+        if m:
+            cap, src = m.group(1).strip(), m.group(2).strip()
+            out.append(
+                f'<figure class="fig"><img src="{html.escape(src, quote=True)}" '
+                f'alt="{html.escape(cap, quote=True)}" loading="lazy">'
+                f'<figcaption>{inline(cap)}</figcaption></figure>'
+            )
+            i += 1
+            continue
+
         if stripped.startswith(">"):
             buf = []
             while i < n and lines[i].strip().startswith(">"):

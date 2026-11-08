@@ -4,6 +4,8 @@ updated: 2026-11-03
 source: OneNote / Books_for_Meds / 검진 protocol, DDx / 위내시경 질환 Study
 ---
 
+![위내시경 삽입·관찰 순서 도해 — Bludy 2009 study](../assets/onenote/위내시경-질환-study-02.png)
+
 ## 상위 개념과 용어
 
 GERD가 가장 상위 개념이고, 정의는 **"위 내용물의 식도 역류로 증상 및 합병증이 발생"** 한 것이다.
